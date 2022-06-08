@@ -1,29 +1,3 @@
 # Starknet-Debian
-info: Starknet node on WSL2
-activated WSL
-wsl --set-default-version 2
-wsl --install -d Debian  *** < or Ubuntu> ***
-  sudo apt update
-  sudo apt full-upgrade
-  sudo apt install -y python3-pip
-  sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
-  sudo apt-get install libgmp-dev    *** restart if necessary ***
-  pip3 install fastecdsa
-  sudo apt-get install -y pkg-config
-  sudo apt-get install curl
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh    *** restart if necessary ***
-  sudo apt install cargo    *** if necessary restart ***
-  rustup update stable
-  pathfinder update
-  sudo apt-get install git
-  git clone --branch v0.2.1-alpha https://github.com/eqlabs/pathfinder.git     *** check new version https://github.com/eqlabs/pathfinder/tags ***
-  sudo apt install python3.8-venv
-  cd pathfinder/py
-  python3 -m venv .venv
-  source .venv/bin/activate
-  PIP_REQUIRE_VIRTUALENV=true pip install pip
-  upgrade pip
-  PIP_REQUIRE_VIRTUALENV=true pip install -r requirements-dev.txt
-  cargo build --release --bin pathfinder
-  cargo run --release --bin pathfinder -- --ethereum.url https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxxxxx *** your infura adress***   
-  ***This is required and must be an HTTP(s) URL pointing to your Ethereum node's endpoint***
+
+Debian and node installation on WSL2
